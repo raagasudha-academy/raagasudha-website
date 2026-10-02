@@ -30,7 +30,7 @@ function ScrollToTop() {
 
 function App() {
   return (
-      <BrowserRouter>
+      <BrowserRouter basename="/raagasudha-website">
         <ScrollToTop />
         <div className="site">
           <Header />
