@@ -1,14 +1,14 @@
 import Button from '../components/Button'
-import pradharshanaImage from '../assets/events/ragSudha26-409.jpg'
-import eventPhotograph from '../assets/events/event-photograph.jpg'
-import performancePhotograph from '../assets/events/performance-photograph.jpeg'
+import pradarshanaImage from '../assets/events/pradarshana-photograph.webp'
+import eventPhotograph from '../assets/events/event-photograph.webp'
+import performancePhotograph from '../assets/events/performance-photograph.webp'
 import communityPhotograph from '../assets/events/community-photograph.webp'
-import celebrationPhotograph from '../assets/events/celebration-photograph.png'
+import celebrationPhotograph from '../assets/events/celebration-photograph.webp'
 
 const eventTypes = [
     {
         number: '01',
-        title: 'Pradharshana',
+        title: 'Pradarshana',
         description:
             'A special opportunity for students to share their musical journey through performance.',
         tone: 'blue',
@@ -66,15 +66,15 @@ function Events() {
             <section className="events-feature section">
                 <div className="event-large-photo">
                     <img
-                        src={pradharshanaImage}
-                        alt="Raaga Sudha students performing at Pradharshana"
+                        src={pradarshanaImage}
+                        alt="Raaga Sudha students performing at Pradarshana"
                     />
                 </div>
 
                 <div className="events-feature-copy">
                     <p className="eyebrow">Featured</p>
 
-                    <h2>Pradharshana</h2>
+                    <h2>Pradarshana</h2>
 
                     <p>
                         A special celebration of the students' musical journey,
@@ -83,7 +83,7 @@ function Events() {
 
                     <p>
                         This space can later feature the details of the latest
-                        Pradharshana, including photographs, programme information
+                        Pradarshana, including photographs, programme information
                         and highlights from the event.
                     </p>
 

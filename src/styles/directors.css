@@ -1,0 +1,128 @@
+/* =========================
+   DIRECTORS PAGE
+========================= */
+
+.directors-intro {
+  max-width: 900px;
+}
+
+.directors-intro h2 {
+  margin: 0;
+
+  color: var(--blue-dark);
+
+  font-size: clamp(42px, 5vw, 66px);
+  line-height: 1.05;
+}
+
+.directors-intro h2 span {
+  display: block;
+  color: var(--blue);
+}
+
+.directors-intro > p:last-child {
+  max-width: 600px;
+  margin-top: 25px;
+
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.directors-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.director-card {
+  display: grid;
+  grid-template-columns: 55px 330px 1fr;
+  gap: 45px;
+  align-items: center;
+
+  padding: 35px;
+
+  border-radius: 28px;
+
+  background: var(--blue-soft);
+}
+
+.director-card:nth-child(2) {
+  background: var(--peach);
+}
+
+.director-card:nth-child(3) {
+  background: var(--mint);
+}
+
+.director-number {
+  align-self: start;
+
+  color: var(--coral);
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.director-photo {
+  height: 370px;
+
+  display: flex;
+  align-items: end;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  background: rgba(255,255,255,0.6);
+}
+
+.director-photo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.director-content h2 {
+  margin: 0 0 25px;
+
+  color: var(--blue-dark);
+
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.05;
+}
+
+.director-content p:not(.eyebrow) {
+  max-width: 650px;
+
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.directors-cta {
+  text-align: center;
+}
+
+.directors-cta h2 {
+  max-width: 700px;
+  margin: 0 auto 30px;
+
+  color: var(--blue-dark);
+
+  font-size: clamp(40px, 4vw, 58px);
+}
+
+
+@media (max-width: 760px) {
+  .director-card {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 25px;
+  }
+
+  .director-photo {
+    height: 330px;
+  }
+}

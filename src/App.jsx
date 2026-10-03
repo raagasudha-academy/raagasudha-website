@@ -30,7 +30,13 @@ function ScrollToTop() {
 
 function App() {
   return (
-      <BrowserRouter basename="/raagasudha-website">
+      <BrowserRouter
+          basename={
+            import.meta.env.BASE_URL === '/'
+                ? '/'
+                : import.meta.env.BASE_URL.replace(/\/$/, '')
+          }
+      >
         <ScrollToTop />
         <div className="site">
           <Header />

@@ -6,7 +6,7 @@ function Directors() {
             number: '01',
             name: 'Mr. Srikailash Venkitadri',
             role: 'Director',
-            image: `${import.meta.env.BASE_URL}directors/srikailash-venkitadri.png`,
+            image: `${import.meta.env.BASE_URL}directors/srikailash-venkitadri.webp`,
             bio: `As a social entrepreneur, Mr. Venkitadri works to take music, particularly Indian music, into communities across the North East of England.
 
 He teaches music through an after-school club at West Jesmond Primary School in Newcastle and is passionate about making Indian music accessible to people of different ages and abilities.
@@ -17,7 +17,7 @@ He is also interested in using music to connect with older members of the commun
             number: '02',
             name: 'Mr. Arvind Kywalya',
             role: 'Director',
-            image: `${import.meta.env.BASE_URL}directors/arvind-kywalya.png`,
+            image: `${import.meta.env.BASE_URL}directors/arvind-kywalya.webp`,
             bio: `Mr. Kywalya is training to become a chartered accountant in London and works for PwC, London. He is passionate about music and is also a performing artist, appearing on stages in London and India.
 
 He has released music singles through his social media presence and is passionate about supporting and developing young artists in the North East through Raaga Sudha Music Academy.`,
@@ -26,7 +26,7 @@ He has released music singles through his social media presence and is passionat
             number: '03',
             name: 'Dr. Bijoysree Sengupta',
             role: 'Director',
-            image: `${import.meta.env.BASE_URL}directors/bijoysree-sengupta.jpg`,
+            image: `${import.meta.env.BASE_URL}directors/bijoysree-sengupta.webp`,
             bio: `Dr. Sengupta is a retired Consultant in Gynecology and Obstetrics at NHS, UK. He was also the Chairman of the European Council of Gynecologists and Obstetricians and an Emeritus Professor in the same field. He has authored three books for MD students in Gynecology and Obstetrics.
 
 He has a keen ear for music and a strong interest in the arts. He encouraged his daughters to develop their artistic interests through piano and singing and is passionate about encouraging arts and music among young people in the North East.

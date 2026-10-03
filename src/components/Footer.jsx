@@ -8,7 +8,7 @@ function Footer() {
                 <div className="footer-brand">
                     <Link to="/">
                         <img
-                            src={`${import.meta.env.BASE_URL}raagasudha-footer-logo.png`}
+                            src={`${import.meta.env.BASE_URL}raagasudha-footer-logo.webp`}
                             alt="Raaga Sudha Music Academy"
                         />
                     </Link>

@@ -1,10 +1,10 @@
 import Button from '../components/Button'
 
-import classEvent from '../assets/classes/classes-hero.png'
+import classEvent from '../assets/classes/classes-hero.webp'
 import middlesbroughImage from '../assets/locations/middlesbrough.webp'
 import durhamImage from '../assets/locations/durham.webp'
-import newcastleImage from '../assets/locations/newcastle.png'
-import onlineClassImage from '../assets/classes/online-classes.png'
+import newcastleImage from '../assets/locations/newcastle.webp'
+import onlineClassImage from '../assets/classes/online-classes.webp'
 
 const locations = [
     {

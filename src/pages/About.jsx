@@ -22,7 +22,7 @@ function About() {
             <section className="about-praveena section">
                 <div className="about-photo">
                     <img
-                        src={`${import.meta.env.BASE_URL}praveena-photo.png`}
+                        src={`${import.meta.env.BASE_URL}praveena-photo.webp`}
                         alt="Mrs. Praveena Srikantan"
                     />
                 </div>

@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
 import SectionHeading from '../components/SectionHeading'
-import classEvent from '../assets/home/class-event1.png'
-import teacherPhoto from '../assets/home/praveena.png'
-import featuredEvent from '../assets/home/featured-event.png'
-import autismMusicImage from '../assets/home/autism-music.jpg'
+import classEvent from '../assets/home/class-event1.webp'
+import teacherPhoto from '../assets/home/praveena.webp'
+import featuredEvent from '../assets/home/featured-event.webp'
+import autismMusicImage from '../assets/home/autism-music.webp'
 
 import middlesbroughImage from '../assets/locations/middlesbrough.webp'
 import durhamImage from '../assets/locations/durham.webp'
-import newcastleImage from '../assets/locations/newcastle.png'
-import onlineImage from '../assets/home/online.png'
+import newcastleImage from '../assets/locations/newcastle.webp'
+import onlineImage from '../assets/home/online.webp'
 
 
 const locations = [
@@ -50,7 +50,7 @@ function Home() {
                         </h1>
 
                         <p className="hero-text">
-                            Learn, perform and grow with Raaga Sudha Music Academy —
+                            Explore, enjoy and grow with Raaga Sudha Music Academy —
                             through traditional Carnatic music, creativity and community.
                         </p>
 
@@ -77,7 +77,7 @@ function Home() {
                             <img src={classEvent} alt="Raaga Sudha students learning Carnatic music" />
                         </div>
                         <div className="hero-note">
-                            <span>Learn · Perform · Belong</span>
+                            <span>Explore · Enjoy · Belong</span>
                             <strong>Music with tradition and heart.</strong>
                         </div>
                     </div>
@@ -145,14 +145,14 @@ function Home() {
             <section className="pillars section">
                 <SectionHeading
                     eyebrow="The Raaga Sudha experience"
-                    title="Learn. Experience. Perform."
+                    title="Explore. Experience. Enjoy."
                     centered
                 />
 
                 <div className="pillar-grid">
                     <article>
                         <span>01</span>
-                        <h3>Learn</h3>
+                        <h3>Eplore</h3>
                         <p>
                             Build a strong foundation in Carnatic music through
                             structured and progressive learning.
@@ -170,7 +170,7 @@ function Home() {
 
                     <article>
                         <span>03</span>
-                        <h3>Perform</h3>
+                        <h3>Enjoy</h3>
                         <p>
                             Grow in confidence through concerts, showcases and
                             opportunities such as Pradarshana.

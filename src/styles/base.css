@@ -1,0 +1,280 @@
+:root {
+  --blue: #4e9fc1;
+  --blue-dark: #19364d;
+  --blue-soft: #eaf6fb;
+
+  --coral: #e87561;
+  --coral-soft: #fff0eb;
+
+  --cream: #fbf6ef;
+  --cream-deep: #f3e8dc;
+  --mint: #e8f5ef;
+  --peach: #fff1e9;
+
+  --white: #ffffff;
+  --line: #dce8ed;
+  --muted: #607582;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+
+.site {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--white);
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+p {
+  line-height: 1.75;
+}
+
+
+/* =========================
+   COMMON
+========================= */
+
+.section {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 110px 0;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+
+  color: var(--blue);
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 45px;
+
+  margin-bottom: 48px;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  color: var(--blue-dark);
+
+  font-size: clamp(38px, 4vw, 56px);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.section-heading-text {
+  max-width: 390px;
+  margin: 0;
+
+  color: var(--muted);
+}
+
+.section-heading.centered {
+  display: block;
+  text-align: center;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 25px;
+
+  color: var(--coral);
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: transform 0.2s ease;
+}
+
+.text-link:hover {
+  transform: translateX(4px);
+}
+
+
+/* =========================
+   IMAGE PLACEHOLDERS
+========================= */
+
+.photo-placeholder {
+  position: relative;
+
+  min-height: 300px;
+
+  border-radius: 34px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(78, 159, 193, 0.14),
+      rgba(232, 245, 239, 0.95)
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  color: var(--blue);
+  text-align: center;
+}
+
+.photo-placeholder::before,
+.photo-placeholder::after {
+  content: '';
+  position: absolute;
+
+  border-radius: 50%;
+  border: 1px solid rgba(78, 159, 193, 0.14);
+}
+
+.photo-placeholder::before {
+  width: 240px;
+  height: 240px;
+}
+
+.photo-placeholder::after {
+  width: 160px;
+  height: 160px;
+}
+
+.photo-placeholder span,
+.photo-placeholder small {
+  position: relative;
+  z-index: 1;
+}
+
+.photo-placeholder span {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.photo-placeholder small {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+
+/* =========================
+   PLACEHOLDER PAGES
+========================= */
+
+.page-placeholder {
+  width: min(1180px, calc(100% - 48px));
+  min-height: 65vh;
+  margin: 0 auto;
+
+  padding: 150px 0;
+
+  text-align: center;
+}
+
+.page-placeholder h1 {
+  margin: 0;
+
+  color: var(--blue-dark);
+
+  font-size: clamp(50px, 7vw, 80px);
+}
+
+.page-placeholder p:last-child {
+  color: var(--muted);
+}
+
+/* =========================================================
+   MOBILE FOUNDATION
+   ========================================================= */
+@media (max-width: 760px) {
+  .section {
+    width: min(100% - 36px, 1180px);
+    padding: 68px 0;
+  }
+
+  .eyebrow {
+    margin-bottom: 11px;
+    font-size: 10px;
+    letter-spacing: 0.13em;
+  }
+
+  .section-heading,
+  .section-heading.centered {
+    display: block;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(34px, 10vw, 44px);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+  }
+
+  .section-heading-text {
+    max-width: 100%;
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .text-link {
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .section {
+    width: min(100% - 30px, 1180px);
+    padding: 58px 0;
+  }
+}
+
+/* =========================================================
+   MOBILE TYPOGRAPHY POLISH
+   ========================================================= */
+@media (max-width: 760px) {
+  p {
+    line-height: 1.68;
+  }
+
+  .section {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    line-height: 1.35;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(33px, 9.5vw, 42px);
+  }
+
+  .section-heading-text {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 420px) {
+  .section {
+    padding-top: 54px;
+    padding-bottom: 54px;
+  }
+}
