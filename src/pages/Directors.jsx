@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function Directors() {
     const directors = [
         {
@@ -98,9 +100,9 @@ As a registered disabled person, he is particularly committed to ensuring that R
 
                 <h2>Learn how Raaga Sudha is governed.</h2>
 
-                <a className="button" href="/governance">
+                <Link className="button" to="/governance">
                     Explore Governance
-                </a>
+                </Link>
             </section>
         </>
     )

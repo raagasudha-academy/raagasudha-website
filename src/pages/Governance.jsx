@@ -1,10 +1,12 @@
+import { Link } from 'react-router-dom'
+
 const documents = [
     {
         number: '01',
         title: 'Child Safeguarding Policy',
         description:
             'Our policy for protecting children and young people who participate in Raaga Sudha activities.',
-        file: '/governance/ChildSafeguarding.pdf',
+        file: 'governance/ChildSafeguarding.pdf',
         tone: 'blue',
     },
     {
@@ -12,7 +14,7 @@ const documents = [
         title: 'Adult Safeguarding Policy',
         description:
             'Our strategy and procedures for safeguarding adults at risk who access Raaga Sudha services.',
-        file: '/governance/AdultSafeguarding.pdf',
+        file: 'governance/AdultSafeguarding.pdf',
         tone: 'peach',
     },
     {
@@ -20,7 +22,7 @@ const documents = [
         title: 'Equality, Diversity & Inclusion',
         description:
             'Our commitment to equality, diversity, dignity and respect for everyone involved with Raaga Sudha.',
-        file: '/governance/EqualityDiversityInclusion.pdf',
+        file: 'governance/EqualityDiversityInclusion.pdf',
         tone: 'mint',
     },
     {
@@ -28,7 +30,7 @@ const documents = [
         title: 'Data Protection Policy',
         description:
             'Information about how Raaga Sudha protects and handles personal information.',
-        file: '/governance/DataProtection.pdf',
+        file: 'governance/DataProtection.pdf',
         tone: 'blue',
     },
     {
@@ -36,7 +38,7 @@ const documents = [
         title: 'Articles of Association',
         description:
             'The governing document setting out the structure, responsibilities and operation of Raaga Sudha Music Academy CIC.',
-        file: '/governance/ArticlesOfAssociation.pdf',
+        file: 'governance/ArticlesOfAssociation.pdf',
         tone: 'peach',
     },
     {
@@ -44,7 +46,7 @@ const documents = [
         title: 'Form CIC36',
         description:
             'The community interest statement describing the community benefit activities of Raaga Sudha.',
-        file: '/governance/CIC36.pdf',
+        file: 'governance/CIC36.pdf',
         tone: 'mint',
     },
     {
@@ -52,7 +54,7 @@ const documents = [
         title: 'Business Plan',
         description:
             `The organisation's business plan and approach to developing its activities and community work.`,
-        file: '/governance/BusinessPlan.pdf',
+        file: 'governance/BusinessPlan.pdf',
         tone: 'blue',
     },
 ]
@@ -158,7 +160,7 @@ function Governance() {
                             <p>{document.description}</p>
 
                             <a
-                                href={document.file}
+                                href={`${import.meta.env.BASE_URL}${document.file}`}
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -176,9 +178,9 @@ function Governance() {
                     <h2>Want to know who's behind the organisation?</h2>
                 </div>
 
-                <a className="button" href="/directors">
+                <Link className="button" to="/directors">
                     Meet Our Directors
-                </a>
+                </Link>
             </section>
         </>
     )

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function About() {
     return (
         <>
@@ -157,13 +159,13 @@ function About() {
                 <h2>Come learn, experience and create with us.</h2>
 
                 <div className="about-cta-actions">
-                    <a href="/classes" className="button">
+                    <Link to="/classes" className="button">
                         Explore Classes
-                    </a>
+                    </Link>
 
-                    <a href="/contact" className="button button-outline">
+                    <Link to="/contact" className="button button-outline">
                         Get in Touch
-                    </a>
+                    </Link>
                 </div>
             </section>
         </>

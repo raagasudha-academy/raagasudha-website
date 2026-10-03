@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function Gallery() {
     return (
         <>
@@ -72,7 +74,7 @@ function Gallery() {
                     </div>
 
                     <p>
-                        Performances, Pradharshana and special musical moments
+                        Performances, Pradarshana and special musical moments
                         shared by our students.
                     </p>
                 </div>
@@ -126,13 +128,13 @@ function Gallery() {
                 </p>
 
                 <div className="gallery-actions">
-                    <a className="button" href="/classes">
+                    <Link className="button" to="/classes">
                         Explore Classes
-                    </a>
+                    </Link>
 
-                    <a className="button button-secondary" href="/events">
+                    <Link className="button button-secondary" to="/events">
                         Explore Events
-                    </a>
+                    </Link>
                 </div>
             </section>
         </>
