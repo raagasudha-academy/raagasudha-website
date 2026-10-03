@@ -33,7 +33,7 @@ function Header() {
                         aria-label="Raaga Sudha home"
                     >
                         <img
-                            src="/raagasudha-logo.webp"
+                            src={`${import.meta.env.BASE_URL}raagasudha-logo.webp`}
                             alt="Raaga Sudha Music Academy"
                         />
                     </NavLink>
