@@ -416,3 +416,11 @@
     padding: 11px 22px;
   }
 }
+
+@media (max-width: 480px) {
+  .pillars .section-heading h2 {
+    font-size: 26px;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+}
