@@ -4,7 +4,7 @@ import SectionHeading from '../components/SectionHeading'
 import classEvent from '../assets/home/class-event1.webp'
 import teacherPhoto from '../assets/home/praveena.webp'
 import featuredEvent from '../assets/home/featured-event.webp'
-import autismMusicImage from '../assets/home/autism-music.webp'
+import autismMusicImage from '../assets/home/new.png'
 
 import middlesbroughImage from '../assets/locations/middlesbrough.webp'
 import durhamImage from '../assets/locations/durham.webp'
@@ -152,7 +152,7 @@ function Home() {
                 <div className="pillar-grid">
                     <article>
                         <span>01</span>
-                        <h3>Eplore</h3>
+                        <h3>Explore</h3>
                         <p>
                             Build a strong foundation in Carnatic music through
                             structured and progressive learning.
