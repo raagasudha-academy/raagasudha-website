@@ -18,7 +18,7 @@ He is also interested in using music to connect with older members of the commun
             name: 'Mr. Arvind Kywalya',
             role: 'Director',
             image: `${import.meta.env.BASE_URL}directors/arvind-kywalya.webp`,
-            bio: `Mr. Kywalya is training to become a chartered accountant in London and works for PwC, London. He is passionate about music and is also a performing artist, appearing on stages in London and India.
+            bio: `Mr. Kywalya is a chartered accountant in London and works for PwC, London. He is passionate about music and is also a performing artist, appearing on stages in London and India.
 
 He has released music singles through his social media presence and is passionate about supporting and developing young artists in the North East through Raaga Sudha Music Academy.`,
         },

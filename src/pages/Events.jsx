@@ -29,6 +29,61 @@ const eventTypes = [
     },
 ]
 
+const pradarshanaHistory = [
+    {
+        event: "Pradarshana '26",
+        date: '04-Jul-26',
+        students: '',
+        turnout: '',
+        venue: 'Gala Theatre, Durham',
+    },
+    {
+        event: "Pradarshana '25",
+        date: '',
+        students: '',
+        turnout: '',
+        venue: '',
+    },
+    {
+        event: 'Pradarshana London Edition',
+        date: '18-Feb-24',
+        students: '51',
+        turnout: '320',
+        venue: 'The Royal Court Theater',
+    },
+    {
+        event: 'Pradarshana London Edition',
+        date: '17-Feb-24',
+        students: '51',
+        turnout: '300',
+        venue: 'The Bhavan',
+    },
+    {
+        event: "Pradarshana '23",
+        date: '24-Jun-23',
+        students: '50',
+        turnout: '543',
+        venue: 'Playhouse Whitley Bay',
+    },
+    {
+        event: "Pradarshana '22",
+        date: '18-Jun-22',
+        students: '40',
+        turnout: '175',
+        venue: 'Northern Stage',
+    },
+    {
+        note: 'Covid 19',
+    },
+    {
+        event: "Pradarshana '19",
+        date: '22-Jun-19',
+        students: '18',
+        turnout: '160',
+        venue: 'Northern Stage',
+    },
+]
+
 function Events() {
     return (
         <>
@@ -91,6 +146,55 @@ function Events() {
                         Enquire About Events
                     </Button>
                 </div>
+            </section>
+
+            <section className="pradarshana-history section">
+                <div className="pradarshana-history-heading">
+                    <div>
+                        <p className="eyebrow">Pradarshana through the years</p>
+                        <h2>A growing stage for our students.</h2>
+                    </div>
+
+                    <p>
+                        A snapshot of Raaga Sudha's Pradarshana journey, from our earlier
+                        showcases to the latest editions.
+                    </p>
+                </div>
+
+                <div className="pradarshana-table-wrap">
+                    <table className="pradarshana-table">
+                        <thead>
+                            <tr>
+                                <th>Event</th>
+                                <th>Date</th>
+                                <th>Students Count</th>
+                                <th>Audience Turnout</th>
+                                <th>Venue</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {pradarshanaHistory.map((item, index) =>
+                                item.note ? (
+                                    <tr className="pradarshana-note-row" key={`${item.note}-${index}`}>
+                                        <td colSpan="5">{item.note}</td>
+                                    </tr>
+                                ) : (
+                                    <tr key={`${item.event}-${item.date || index}`}>
+                                        <td>{item.event}</td>
+                                        <td>{item.date}</td>
+                                        <td>{item.students}</td>
+                                        <td>{item.turnout}</td>
+                                        <td>{item.venue}</td>
+                                    </tr>
+                                )
+                            )}
+                        </tbody>
+                    </table>
+                </div>
+
+                <p className="pradarshana-history-note">
+                    Visit this space for more information on upcoming Pradarshana events and editions.
+                </p>
             </section>
 
             <section className="event-types">

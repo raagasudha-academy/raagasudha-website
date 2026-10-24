@@ -1,5 +1,8 @@
 import Button from '../components/Button'
 import communityPhoto from '../assets/home/autism-music.webp'
+import audiencePhoto from '../assets/community/community-audience-stage.webp'
+import applausePhoto from '../assets/community/community-applause.webp'
+import finalePhoto from '../assets/community/community-finale.webp'
 
 function Community() {
     return (
@@ -79,6 +82,47 @@ function Community() {
                             a chance to explore, participate and develop confidence.
                         </p>
                     </div>
+                </div>
+            </section>
+
+            <section className="community-moments section">
+                <div className="community-moments-heading">
+                    <div>
+                        <p className="eyebrow">Together in music</p>
+                        <h2>A community around every performance.</h2>
+                    </div>
+
+                    <p>
+                        Students, families, teachers and audiences all become part
+                        of the experience — supporting, celebrating and sharing the
+                        joy of music together.
+                    </p>
+                </div>
+
+                <div className="community-moments-grid">
+                    <figure className="community-moment community-moment-wide">
+                        <img
+                            src={finalePhoto}
+                            alt="Raaga Sudha performers, teachers and families together after a performance"
+                            loading="lazy"
+                        />
+                    </figure>
+
+                    <figure className="community-moment">
+                        <img
+                            src={audiencePhoto}
+                            alt="Raaga Sudha audience applauding performers on stage"
+                            loading="lazy"
+                        />
+                    </figure>
+
+                    <figure className="community-moment">
+                        <img
+                            src={applausePhoto}
+                            alt="Audience members standing and applauding at a Raaga Sudha performance"
+                            loading="lazy"
+                        />
+                    </figure>
                 </div>
             </section>
 

@@ -346,3 +346,92 @@
     height: 330px;
   }
 }
+
+/* =========================================================
+   V1 IMAGE CURATION — COMMUNITY MOMENTS
+   ========================================================= */
+
+.community-moments {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.community-moments-heading {
+  display: grid;
+  grid-template-columns: 1fr 0.78fr;
+  align-items: end;
+  gap: 70px;
+  margin-bottom: 42px;
+}
+
+.community-moments-heading h2 {
+  max-width: 720px;
+  margin: 0;
+  color: var(--blue-dark);
+  font-size: clamp(40px, 4vw, 58px);
+  line-height: 1.08;
+}
+
+.community-moments-heading > p {
+  max-width: 480px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.community-moments-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.community-moment {
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border-radius: 24px;
+  background: #eef5f6;
+  box-shadow: 0 14px 36px rgba(25, 54, 77, 0.09);
+}
+
+.community-moment-wide {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 7;
+}
+
+.community-moment img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 760px) {
+  .community-moments {
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+
+  .community-moments-heading {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+
+  .community-moments-heading h2 {
+    font-size: 38px;
+  }
+
+  .community-moments-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .community-moment,
+  .community-moment-wide {
+    grid-column: auto;
+    aspect-ratio: 4 / 3;
+    border-radius: 20px;
+  }
+}

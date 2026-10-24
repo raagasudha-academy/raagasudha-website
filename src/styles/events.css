@@ -154,6 +154,130 @@
   border-radius: 28px;
 }
 
+
+/* =========================================================
+   PRADARSHANA HISTORY
+   ========================================================= */
+
+.pradarshana-history {
+  padding-top: 25px;
+  padding-bottom: 105px;
+}
+
+.pradarshana-history-heading {
+  display: grid;
+  grid-template-columns: 1fr 0.72fr;
+  align-items: end;
+  gap: 60px;
+  margin-bottom: 38px;
+}
+
+.pradarshana-history-heading h2 {
+  max-width: 720px;
+  margin: 0;
+  color: var(--blue-dark);
+  font-size: clamp(38px, 4vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.pradarshana-history-heading > p {
+  max-width: 470px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.pradarshana-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(25, 54, 77, 0.1);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 16px 42px rgba(25, 54, 77, 0.07);
+}
+
+.pradarshana-table {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.pradarshana-table th,
+.pradarshana-table td {
+  padding: 22px 20px;
+  border-bottom: 1px solid rgba(25, 54, 77, 0.1);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.pradarshana-table th {
+  background: var(--blue-dark);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.pradarshana-table td {
+  color: var(--blue-dark);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.pradarshana-table th:nth-child(1),
+.pradarshana-table td:nth-child(1) {
+  width: 24%;
+}
+
+.pradarshana-table th:nth-child(2),
+.pradarshana-table td:nth-child(2) {
+  width: 14%;
+}
+
+.pradarshana-table th:nth-child(3),
+.pradarshana-table td:nth-child(3) {
+  width: 15%;
+  text-align: center;
+}
+
+.pradarshana-table th:nth-child(4),
+.pradarshana-table td:nth-child(4) {
+  width: 18%;
+  text-align: center;
+}
+
+.pradarshana-table th:nth-child(5),
+.pradarshana-table td:nth-child(5) {
+  width: 29%;
+}
+
+.pradarshana-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.pradarshana-table tbody tr:not(.pradarshana-note-row):hover td {
+  background: #f8fbfb;
+}
+
+.pradarshana-note-row td {
+  padding: 17px 20px;
+  background: var(--coral-soft);
+  color: var(--coral);
+  text-align: center !important;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.pradarshana-history-note {
+  margin: 14px 4px 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
 /* =========================================================
    EVENTS — EVENT TYPES
    ========================================================= */
@@ -419,5 +543,28 @@
 
   .events-hero h1 {
     font-size: 42px;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .pradarshana-history {
+    padding-top: 10px;
+    padding-bottom: 75px;
+  }
+
+  .pradarshana-history-heading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+
+  .pradarshana-history-heading h2 {
+    font-size: 38px;
+  }
+
+  .pradarshana-table-wrap {
+    margin-right: -14px;
+    border-radius: 20px 0 0 20px;
   }
 }

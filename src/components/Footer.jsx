@@ -23,17 +23,18 @@ function Footer() {
                     <div>
                         <h3>Explore</h3>
 
-                        <Link to="/about">About</Link>
+                        <Link to="/">Home</Link>
                         <Link to="/classes">Classes</Link>
-                        <Link to="/registration">Student Registration</Link>
                         <Link to="/events">Events</Link>
                         <Link to="/community">Community</Link>
                         <Link to="/gallery">Gallery</Link>
+                        <Link to="/registration">Register</Link>
                     </div>
 
                     <div>
-                        <h3>Organisation</h3>
+                        <h3>About</h3>
 
+                        <Link to="/about">Our Story</Link>
                         <Link to="/directors">Directors</Link>
                         <Link to="/governance">Governance</Link>
                         <Link to="/contact">Contact</Link>
