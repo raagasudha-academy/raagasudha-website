@@ -39,10 +39,10 @@ const pradarshanaHistory = [
     },
     {
         event: "Pradarshana '25",
-        date: '15-06-25',
+        date: '15-Jun-25',
         students: '55',
         turnout: '150',
-        venue: 'St Aidans community centre',
+        venue: 'St Aidans Community Center',
     },
     {
         event: 'Pradarshana London Edition',
