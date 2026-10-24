@@ -1,5 +1,23 @@
 import { Link } from 'react-router-dom'
 
+import featuredPhoto from '../assets/events/pradarshana-photograph.webp'
+import classesPhoto from '../assets/classes/classes-hero.webp'
+import classMoment from '../assets/home/class-event1.webp'
+import inclusionPhoto from '../assets/home/autism-music.webp'
+import performancePhoto from '../assets/events/performance-photograph.webp'
+import eventPhoto from '../assets/events/event-photograph.webp'
+import celebrationPhoto from '../assets/events/celebration-photograph.webp'
+import communityPhoto from '../assets/events/community-photograph.webp'
+import featuredEventPhoto from '../assets/home/featured-event.webp'
+
+function GalleryPhoto({ src, alt, className = '' }) {
+    return (
+        <div className={`gallery-photo ${className}`.trim()}>
+            <img src={src} alt={alt} loading="lazy" />
+        </div>
+    )
+}
+
 function Gallery() {
     return (
         <>
@@ -20,10 +38,11 @@ function Gallery() {
             </section>
 
             <section className="gallery-feature section">
-                <div className="gallery-feature-photo photo-placeholder">
-                    <span>Featured photograph</span>
-                    <small>Your strongest Raaga Sudha photograph goes here</small>
-                </div>
+                <GalleryPhoto
+                    src={featuredPhoto}
+                    alt="Raaga Sudha students performing together at Pradarshana"
+                    className="gallery-feature-photo"
+                />
 
                 <div className="gallery-feature-copy">
                     <p className="eyebrow">Life at Raaga Sudha</p>
@@ -52,17 +71,9 @@ function Gallery() {
                 </div>
 
                 <div className="gallery-grid gallery-grid-three">
-                    <div className="photo-placeholder">
-                        <span>Class photograph</span>
-                    </div>
-
-                    <div className="photo-placeholder">
-                        <span>Class photograph</span>
-                    </div>
-
-                    <div className="photo-placeholder">
-                        <span>Class photograph</span>
-                    </div>
+                    <GalleryPhoto src={classesPhoto} alt="Raaga Sudha students learning Carnatic music together" />
+                    <GalleryPhoto src={classMoment} alt="Young Raaga Sudha students sharing a musical moment" />
+                    <GalleryPhoto src={inclusionPhoto} alt="Inclusive community music performance with Raaga Sudha" />
                 </div>
             </section>
 
@@ -80,17 +91,13 @@ function Gallery() {
                 </div>
 
                 <div className="gallery-grid gallery-grid-performance">
-                    <div className="photo-placeholder gallery-large">
-                        <span>Performance photograph</span>
-                    </div>
-
-                    <div className="photo-placeholder">
-                        <span>Performance photograph</span>
-                    </div>
-
-                    <div className="photo-placeholder">
-                        <span>Performance photograph</span>
-                    </div>
+                    <GalleryPhoto
+                        src={performancePhoto}
+                        alt="Raaga Sudha student performance"
+                        className="gallery-large"
+                    />
+                    <GalleryPhoto src={eventPhoto} alt="Raaga Sudha event performance" />
+                    <GalleryPhoto src={celebrationPhoto} alt="Raaga Sudha students celebrating music on stage" />
                 </div>
             </section>
 
@@ -108,13 +115,12 @@ function Gallery() {
                 </div>
 
                 <div className="gallery-grid gallery-grid-community">
-                    <div className="photo-placeholder">
-                        <span>Community photograph</span>
-                    </div>
-
-                    <div className="photo-placeholder gallery-wide">
-                        <span>Community photograph</span>
-                    </div>
+                    <GalleryPhoto src={communityPhoto} alt="Raaga Sudha community gathering" />
+                    <GalleryPhoto
+                        src={featuredEventPhoto}
+                        alt="Raaga Sudha students performing at a community event"
+                        className="gallery-wide"
+                    />
                 </div>
             </section>
 

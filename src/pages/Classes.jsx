@@ -13,7 +13,9 @@ const locations = [
         time: '1:00 – 3:30 PM',
         venue: 'St. Aidans Community Centre, Gosforth',
         address: 'Princes Rd, Newcastle upon Tyne, NE3 5TT',
-        image: newcastleImage
+        image: newcastleImage,
+        fadeMid: 'rgba(255,247,240,0.55)',
+        fadeEnd: 'rgba(255,247,240,0.96)'
     },
     {
         name: 'Durham',
@@ -21,7 +23,9 @@ const locations = [
         time: '8:30 AM – 11:00 AM',
         venue: 'Framwellgate Moor Community Centre',
         address: 'Front St, Durham DH1 5BL',
-        image: durhamImage
+        image: durhamImage,
+        fadeMid: 'rgba(228,243,238,0.55)',
+        fadeEnd: 'rgba(228,243,238,0.96)'
     },
     {
         name: 'Middlesbrough',
@@ -29,7 +33,9 @@ const locations = [
         time: '5:00 – 6:00 PM',
         venue: 'Hindu Temple',
         address: '54 Westbourne Grove, North Ormesby, Middlesbrough TS3 6EF',
-        image: middlesbroughImage
+        image: middlesbroughImage,
+        fadeMid: 'rgba(255,247,240,0.55)',
+        fadeEnd: 'rgba(255,247,240,0.96)'
     },
 ]
 
@@ -84,9 +90,13 @@ function Classes() {
                     <div className="class-location-list">
                         {locations.map((location, index) => (
                             <article
-                                className={`class-location-card ${location.tone}`}
+                                className={`class-location-card ${location.tone || ''}`}
                                 key={location.name}
-
+                                style={{
+                                    '--location-image': `url(${location.image})`,
+                                    '--location-fade-mid': location.fadeMid,
+                                    '--location-fade-end': location.fadeEnd,
+                                }}
                             >
                                 <div className="class-location-number">
                                     {String(index + 1).padStart(2, '0')}
@@ -199,7 +209,7 @@ function Classes() {
                     interested in.
                 </p>
 
-                <Button to="/contact">Get in Touch</Button>
+                <Button to="/registration">Register a Student</Button>
             </section>
         </>
     )

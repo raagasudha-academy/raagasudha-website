@@ -25,6 +25,7 @@ function Footer() {
 
                         <Link to="/about">About</Link>
                         <Link to="/classes">Classes</Link>
+                        <Link to="/registration">Student Registration</Link>
                         <Link to="/events">Events</Link>
                         <Link to="/community">Community</Link>
                         <Link to="/gallery">Gallery</Link>

@@ -1,4 +1,5 @@
 import Button from '../components/Button'
+import communityPhoto from '../assets/home/autism-music.webp'
 
 function Community() {
     return (
@@ -54,9 +55,12 @@ function Community() {
 
             <section className="community-feature">
                 <div className="community-feature-inner">
-                    <div className="community-feature-photo photo-placeholder">
-                        <span>Community photograph</span>
-                        <small>A real community moment will go here</small>
+                    <div className="community-feature-photo">
+                        <img
+                            src={communityPhoto}
+                            alt="Raaga Sudha community music performance with Autism Able participants"
+                            loading="lazy"
+                        />
                     </div>
 
                     <div className="community-feature-copy">

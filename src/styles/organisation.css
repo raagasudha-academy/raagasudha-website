@@ -66,3 +66,37 @@
     font-size: 52px;
   }
 }
+
+
+/* =========================================================
+   V1 FINAL — COMPACT INNER-PAGE HERO
+   ========================================================= */
+
+.directors-hero,
+.governance-hero {
+  min-height: 340px;
+  padding: 62px 24px 58px;
+}
+
+.directors-hero h1,
+.governance-hero h1 {
+  font-size: clamp(44px, 5vw, 66px);
+}
+
+.directors-hero p:last-child,
+.governance-hero p:last-child {
+  margin-top: 20px;
+}
+
+@media (max-width: 760px) {
+  .directors-hero,
+  .governance-hero {
+    min-height: 285px;
+    padding: 44px 20px 40px;
+  }
+
+  .directors-hero h1,
+  .governance-hero h1 {
+    font-size: 42px;
+  }
+}

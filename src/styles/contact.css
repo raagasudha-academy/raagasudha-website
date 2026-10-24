@@ -349,3 +349,32 @@
     margin-top: 20px;
   }
 }
+
+
+/* =========================================================
+   V1 FINAL — COMPACT INNER-PAGE HERO
+   ========================================================= */
+
+.contact-hero {
+  min-height: 340px;
+  padding: 62px 24px 58px;
+}
+
+.contact-hero h1 {
+  font-size: clamp(44px, 5vw, 66px);
+}
+
+.contact-hero p:last-child {
+  margin-top: 20px;
+}
+
+@media (max-width: 760px) {
+  .contact-hero {
+    min-height: 285px;
+    padding: 44px 20px 40px;
+  }
+
+  .contact-hero h1 {
+    font-size: 42px;
+  }
+}

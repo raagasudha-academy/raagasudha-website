@@ -313,3 +313,32 @@
     align-items: center;
   }
 }
+
+
+/* =========================================================
+   V1 FINAL — COMPACT INNER-PAGE HERO
+   ========================================================= */
+
+.about-hero {
+  min-height: 340px;
+  padding: 62px 24px 58px;
+}
+
+.about-hero h1 {
+  font-size: clamp(44px, 5vw, 66px);
+}
+
+.about-hero p:last-child {
+  margin-top: 20px;
+}
+
+@media (max-width: 760px) {
+  .about-hero {
+    min-height: 285px;
+    padding: 44px 20px 40px;
+  }
+
+  .about-hero h1 {
+    font-size: 42px;
+  }
+}

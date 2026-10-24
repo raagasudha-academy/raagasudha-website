@@ -1,0 +1,68 @@
+.directors-hero,
+.governance-hero {
+  min-height: 470px;
+  padding: 100px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+          radial-gradient(
+                  circle at 70% 25%,
+                  rgba(78, 159, 193, 0.12),
+                  transparent 30%
+          ),
+          linear-gradient(
+                  135deg,
+                  #f8fcfd 0%,
+                  #eef8fb 100%
+          );
+}
+
+.directors-hero-inner,
+.governance-hero-inner {
+  max-width: 850px;
+}
+
+.directors-hero h1,
+.governance-hero h1 {
+  margin: 0;
+
+  color: var(--blue-dark);
+
+  font-size: clamp(52px, 7vw, 82px);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.directors-hero h1 span,
+.governance-hero h1 span {
+  display: block;
+  color: var(--blue);
+}
+
+.directors-hero p:last-child,
+.governance-hero p:last-child {
+  max-width: 650px;
+  margin: 30px auto 0;
+
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+  .directors-hero,
+  .governance-hero {
+    min-height: 410px;
+    padding: 75px 20px;
+  }
+
+  .directors-hero h1,
+  .governance-hero h1 {
+    font-size: 52px;
+  }
+}

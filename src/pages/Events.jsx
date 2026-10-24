@@ -82,9 +82,9 @@ function Events() {
                     </p>
 
                     <p>
-                        This space can later feature the details of the latest
-                        Pradarshana, including photographs, programme information
-                        and highlights from the event.
+                        Pradarshana brings students, families and teachers together
+                        to celebrate progress, confidence and the joy of sharing
+                        music with an audience.
                     </p>
 
                     <Button to="/contact" variant="secondary">
@@ -124,26 +124,26 @@ function Events() {
                     </div>
 
                     <p>
-                        Real photographs from Raaga Sudha events will bring this
-                        section to life.
+                        A selection of moments from performances, celebrations and
+                        gatherings across the Raaga Sudha community.
                     </p>
                 </div>
 
                 <div className="event-photo-grid">
                     <div className="photo-placeholder photo-tall">
-                        <img className="photo-event" src={eventPhotograph} alt="Event photograph" />
+                        <img className="photo-event" src={eventPhotograph} alt="Raaga Sudha event performance" loading="lazy" />
                     </div>
 
                     <div className="photo-placeholder">
-                        <img className="photo-performance" src={performancePhotograph} alt="Performance photograph" />
+                        <img className="photo-performance" src={performancePhotograph} alt="Raaga Sudha student performance" loading="lazy" />
                     </div>
 
                     <div className="photo-placeholder">
-                        <img src={communityPhotograph} alt="Community photograph" />
+                        <img src={communityPhotograph} alt="Raaga Sudha community event" loading="lazy" />
                     </div>
 
                     <div className="photo-placeholder photo-wide">
-                        <img src={celebrationPhotograph} alt="Celebration photograph" />
+                        <img src={celebrationPhotograph} alt="Raaga Sudha musical celebration" loading="lazy" />
                     </div>
                 </div>
             </section>

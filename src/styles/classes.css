@@ -937,3 +937,55 @@
 .class-location-card:nth-child(2) .class-location-time strong {
   color: #e66b57;
 }
+
+
+/* =========================================================
+   V1 FINAL — ROBUST LOCATION IMAGES + COMPACT INNER HERO
+   ========================================================= */
+
+.class-location-card::before {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.02) 40%,
+      var(--location-fade-mid) 88%,
+      var(--location-fade-end) 100%
+    ),
+    var(--location-image) !important;
+}
+
+.page-hero {
+  min-height: 460px;
+  padding: 54px 7% 58px;
+  gap: 48px;
+}
+
+.page-hero h1 {
+  font-size: clamp(46px, 5vw, 68px);
+}
+
+.page-hero-copy > p:last-child {
+  margin-top: 20px;
+}
+
+.page-hero-image {
+  height: 390px;
+  border-radius: 58px;
+}
+
+@media (max-width: 760px) {
+  .page-hero {
+    min-height: auto;
+    padding: 42px 20px 46px;
+    gap: 30px;
+  }
+
+  .page-hero h1 {
+    font-size: 43px;
+  }
+
+  .page-hero-image {
+    height: 280px;
+    border-radius: 32px;
+  }
+}

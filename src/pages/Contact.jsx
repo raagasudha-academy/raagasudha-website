@@ -133,8 +133,8 @@ function Contact() {
                     <div className="contact-enquiry-action">
                         <p className="eyebrow">Ready to begin?</p>
 
-                        <Button to="/classes">
-                            Explore Classes
+                        <Button to="/registration">
+                            Student Registration
                         </Button>
                     </div>
                 </div>
