@@ -33,16 +33,16 @@ const pradarshanaHistory = [
     {
         event: "Pradarshana '26",
         date: '04-Jul-26',
-        students: '',
-        turnout: '',
+        students: '65',
+        turnout: '393',
         venue: 'Gala Theatre, Durham',
     },
     {
         event: "Pradarshana '25",
-        date: '',
-        students: '',
-        turnout: '',
-        venue: '',
+        date: '15-06-25',
+        students: '55',
+        turnout: '150',
+        venue: 'St Aidans community centre',
     },
     {
         event: 'Pradarshana London Edition',
