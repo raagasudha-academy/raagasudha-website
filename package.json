@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node --test tests/*.test.js",
+    "test:backend": "python3 -m unittest discover -s backend/registration -p 'test_*.py'",
+    "test:registration": "npm test && npm run test:backend"
   },
   "dependencies": {
     "react": "^19.2.8",
