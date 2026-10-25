@@ -34,6 +34,7 @@ jobs:
       - name: Build
         env:
           VITE_REGISTRATION_API_URL: ${{ vars.VITE_REGISTRATION_API_URL }}
+          VITE_CHAT_API_URL: ${{ vars.VITE_CHAT_API_URL }}
         run: npm run build
 
       - name: Setup Pages

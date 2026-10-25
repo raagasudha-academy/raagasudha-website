@@ -51,7 +51,7 @@ function ChatWidget() {
         setIsSending(true)
 
         try {
-            const response = await fetch(`${API_URL}/api/chat`, {
+            const response = await fetch(`${API_URL}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
