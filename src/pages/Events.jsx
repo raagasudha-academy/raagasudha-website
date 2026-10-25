@@ -46,7 +46,7 @@ const pradarshanaHistory = [
     },
     {
         event: "Pradarshana '24",
-        date: '15-Jun-25',
+        date: '13-Oct-24',
         students: '58',
         turnout: '1110',
         venue: 'The Glasshouse International Centre For Music',
