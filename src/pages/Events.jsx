@@ -40,9 +40,16 @@ const pradarshanaHistory = [
     {
         event: "Pradarshana '25",
         date: '15-Jun-25',
-        students: '55',
+        students: '60',
         turnout: '150',
         venue: 'St Aidans Community Center',
+    },
+    {
+        event: "Pradarshana '24",
+        date: '15-Jun-25',
+        students: '58',
+        turnout: '1110',
+        venue: 'he Glasshouse International Centre For Music',
     },
     {
         event: 'Pradarshana London Edition',
