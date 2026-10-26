@@ -36,7 +36,7 @@ function Community() {
 
                 <div className="community-story-copy">
                     <p>
-                        Alongside her work as a music teacher, Mrs. Praveena is
+                        Alongside her work as a music teacher, Mrs Praveena Srikailash is
                         a qualified Behaviour Consultant specialising in children
                         and young adults with learning disabilities.
                     </p>
@@ -72,7 +72,7 @@ function Community() {
                         <h2>Not just learn. Enjoy and create music.</h2>
 
                         <p>
-                            Praveena believes creativity is innate in every child.
+                            Mrs Praveena Srikailash believes creativity is innate in every child.
                             Her approach is about giving students the opportunity
                             to discover and express that creativity through music.
                         </p>

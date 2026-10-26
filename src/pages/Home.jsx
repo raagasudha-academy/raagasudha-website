@@ -181,7 +181,7 @@ function Home() {
 
             <section className="teacher-preview section section-peach">
                 <div className="teacher-photo">
-                    <img src={teacherPhoto} alt="Praveena Srikantan - Raaga Sudha music teacher" />
+                    <img src={teacherPhoto} alt="Mrs Praveena Srikailash - Raaga Sudha music teacher" />
                 </div>
 
                 <div>
@@ -190,13 +190,13 @@ function Home() {
                     <h2>Music with tradition, creativity and heart.</h2>
 
                     <p>
-                        At the heart of Raaga Sudha is Praveena Srikantan, whose
+                        At the heart of Raaga Sudha is Mrs Praveena Srikailash, whose
                         teaching brings together the traditions of Carnatic music
                         with a warm and encouraging approach to learning.
                     </p>
 
                     <Link className="text-link" to="/about">
-                        Meet Praveena →
+                        Meet Mrs Praveena Srikailash →
                     </Link>
                 </div>
             </section>

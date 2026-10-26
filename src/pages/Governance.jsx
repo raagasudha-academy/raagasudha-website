@@ -128,7 +128,7 @@ function Governance() {
 
                             <div>
                                 <strong>Deputy Safeguarding Officer</strong>
-                                <span>Praveena Srikantan</span>
+                                <span>Mrs Praveena Srikailash</span>
                             </div>
                         </div>
                     </div>

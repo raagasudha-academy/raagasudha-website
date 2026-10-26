@@ -43,14 +43,14 @@ function Footer() {
                     <div>
                         <h3>Contact</h3>
 
-                        <p>Mrs. Praveena</p>
+                        <p>Mrs Praveena Srikailash</p>
 
                         <a href="tel:+447702785815">
                             +44 7702 785815
                         </a>
 
                         <p className="footer-contact-note">
-                            Contact Praveena for class enquiries,
+                            Contact Mrs Praveena Srikailash for class enquiries,
                             registration, timings and availability.
                         </p>
                     </div>

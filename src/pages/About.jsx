@@ -23,23 +23,23 @@ function About() {
                 <div className="about-photo">
                     <img
                         src={`${import.meta.env.BASE_URL}praveena-photo.webp`}
-                        alt="Mrs. Praveena Srikantan"
+                        alt="Mrs Praveena Srikailash"
                     />
                 </div>
 
                 <div className="about-praveena-copy">
-                    <p className="eyebrow">Meet Mrs. Praveena</p>
+                    <p className="eyebrow">Meet Mrs Praveena Srikailash</p>
 
                     <h2>A lifelong journey with Carnatic music.</h2>
 
                     <p>
-                        Vidya Praveena Srikantan is a disciple of
+                        Mrs Praveena Srikailash is a disciple of
                         Smt. Vijaya Nagarajan, a direct disciple of
                         Padma Vibhushan Smt. D. K. Pattammal.
                     </p>
 
                     <p>
-                        Praveena studied Indian Classical Carnatic music under
+                        Mrs Praveena Srikailash studied Indian Classical Carnatic music under
                         Smt. Vijaya Nagarajan for 15 years in Chennai, India.
                         She has continued her musical journey through regular
                         lessons with experts in the field.
@@ -66,7 +66,7 @@ function About() {
 
                     <div className="about-community-copy">
                         <p>
-                            Praveena is also a qualified Behaviour Consultant,
+                            Mrs Praveena Srikailash is also a qualified Behaviour Consultant,
                             specialising in working with children and young adults
                             with learning disabilities.
                         </p>
@@ -98,7 +98,7 @@ function About() {
                         <span>01</span>
                         <h3>Bhajans & devotional music</h3>
                         <p>
-                            Praveena has a special interest in bhajan renditions
+                            Mrs Praveena Srikailash has a special interest in bhajan renditions
                             and has a vast repertoire of soulful devotional songs.
                         </p>
                     </article>
@@ -107,7 +107,7 @@ function About() {
                         <span>02</span>
                         <h3>Composing & recording</h3>
                         <p>
-                            Although trained in Carnatic music, Praveena has been
+                            Although trained in Carnatic music, Mrs Praveena Srikailash has been
                             composing across different genres since her school days,
                             including bhajans, patriotic songs and songs about
                             India's sacred rivers.
@@ -146,7 +146,7 @@ function About() {
                     </blockquote>
 
                     <p>
-                        Praveena believes creativity is innate in every child.
+                        Mrs Praveena Srikailash believes creativity is innate in every child.
                         Her aim is to give students the opportunity to discover
                         that creativity through music.
                     </p>

@@ -27,7 +27,7 @@ const locations = [
         name: 'Online',
         type: 'Online classes',
         description:
-            'Raaga Sudha also offers online music classes. Contact Mrs. Praveena for registration, timings and availability.',
+            'Raaga Sudha also offers online music classes. Contact Mrs Praveena Srikailash for registration, timings and availability.',
     },
 ]
 
@@ -70,7 +70,7 @@ function Contact() {
 
                     <p>
                         For online class registration, timings and availability,
-                        please contact Mrs. Praveena.
+                        please contact Mrs Praveena Srikailash.
                     </p>
                 </div>
             </section>
@@ -103,7 +103,7 @@ function Contact() {
 
                                 {location.name === 'Online' && (
                                     <p className="location-note">
-                                        Contact Mrs. Praveena for registration,
+                                        Contact Mrs Praveena Srikailash for registration,
                                         timings and availability.
                                     </p>
                                 )}
@@ -160,11 +160,11 @@ function Contact() {
                 <div>
                     <p className="eyebrow">Contact us</p>
 
-                    <h2>Speak to Praveena.</h2>
+                    <h2>Speak to Mrs Praveena Srikailash.</h2>
 
                     <p>
                         For class enquiries, registration, timings and
-                        availability, please contact Mrs. Praveena.
+                        availability, please contact Mrs Praveena Srikailash.
                     </p>
                 </div>
 

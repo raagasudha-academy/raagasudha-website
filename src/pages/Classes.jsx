@@ -128,7 +128,7 @@ function Classes() {
                         </p>
                         <p>
                             For information about online classes and availability,
-                            please contact Praveena.
+                            please contact Mrs Praveena Srikailash.
                         </p>
                         <Button to="/contact">Enquire About Online Classes</Button>
                     </div>
