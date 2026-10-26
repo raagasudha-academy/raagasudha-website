@@ -1,6 +1,6 @@
 export const ACADEMY_LOCATIONS = [
   {
-    id: 'LOC-NEWCASTLE',
+    id: 'NEWCASTLE',
     name: 'Newcastle',
     mode: 'in-person',
     day: 'Saturday',
@@ -9,7 +9,7 @@ export const ACADEMY_LOCATIONS = [
     address: 'Princes Rd, Newcastle upon Tyne, NE3 5TT',
   },
   {
-    id: 'LOC-DURHAM',
+    id: 'DURHAM',
     name: 'Durham',
     mode: 'in-person',
     day: 'Sunday',
@@ -18,7 +18,7 @@ export const ACADEMY_LOCATIONS = [
     address: 'Front St, Durham DH1 5BL',
   },
   {
-    id: 'LOC-MIDDLESBROUGH',
+    id: 'MIDDLESBROUGH',
     name: 'Middlesbrough',
     mode: 'in-person',
     day: 'Sunday',
@@ -27,7 +27,7 @@ export const ACADEMY_LOCATIONS = [
     address: '54 Westbourne Grove, North Ormesby, Middlesbrough TS3 6EF',
   },
   {
-    id: 'LOC-ONLINE',
+    id: 'ONLINE',
     name: 'Online',
     mode: 'online',
     day: 'By arrangement',

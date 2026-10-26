@@ -14,7 +14,7 @@ function validPrimary(form) {
   form.primary.fullName = 'Primary Adult'
   form.primary.email = 'adult@example.com'
   form.primary.phone = '+447700900123'
-  form.primary.preferredLocationId = 'LOC-NEWCASTLE'
+  form.primary.preferredLocationId = 'NEWCASTLE'
   form.emergencyContact = { name: 'Emergency Person', phone: '+447700900999' }
   form.privacyAccepted = true
   form.mediaConsent = 'declined'
@@ -29,7 +29,7 @@ function validChildForm() {
   form.primary.relationshipToChildren = 'parent'
   form.children[0].fullName = 'Child One'
   form.children[0].dateOfBirth = '2015-01-01'
-  form.children[0].preferredLocationId = 'LOC-NEWCASTLE'
+  form.children[0].preferredLocationId = 'NEWCASTLE'
   form.children[0].foodAllergies.status = 'none'
   return form
 }
@@ -86,7 +86,7 @@ test('a child can independently use own email while inheriting phone and address
 
 test('multiple children may keep different location and course preferences', () => {
   const form = validChildForm()
-  const second = emptyStudent({ studentType: 'child', preferredLocationId: 'LOC-DURHAM' })
+  const second = emptyStudent({ studentType: 'child', preferredLocationId: 'DURHAM' })
   second.fullName = 'Child Two'
   second.dateOfBirth = '2017-01-01'
   second.foodAllergies.status = 'unknown'
@@ -96,7 +96,7 @@ test('multiple children may keep different location and course preferences', () 
   assert.deepEqual(errors, {})
   const payload = buildRegistrationPayload({ form, requestId: 'client-test-request-9012' })
   assert.equal(payload.students.length, 2)
-  assert.equal(payload.students[1].preferredLocationId, 'LOC-DURHAM')
+  assert.equal(payload.students[1].preferredLocationId, 'DURHAM')
 })
 
 test('combined registration produces one adult person plus child people, not a duplicated adult', () => {
@@ -104,11 +104,11 @@ test('combined registration produces one adult person plus child people, not a d
   form.primary.dateOfBirth = '1988-02-01'
   form = applyRegistrationType(form, 'adult-and-children')
   form.primary.relationshipToChildren = 'parent'
-  form.adultStudent.preferredLocationId = 'LOC-NEWCASTLE'
+  form.adultStudent.preferredLocationId = 'NEWCASTLE'
   form.adultStudent.foodAllergies.status = 'none'
   form.children[0].fullName = 'Child One'
   form.children[0].dateOfBirth = '2016-03-01'
-  form.children[0].preferredLocationId = 'LOC-DURHAM'
+  form.children[0].preferredLocationId = 'DURHAM'
   form.children[0].foodAllergies.status = 'none'
   const errors = validateRegistration(form)
   assert.deepEqual(errors, {})

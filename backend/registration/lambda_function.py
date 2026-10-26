@@ -19,7 +19,6 @@ from registration_core import (
     expected_photo_prefix,
     registration_id_for,
     registration_summary,
-    restore_location_prefixes,
     validate_v1,
     validate_v2,
 )
@@ -340,7 +339,7 @@ def handle_admin_get_one(event):
     item = _get_registration(registration_id)
     if not item:
         return response(404, {"message": "Registration not found."})
-    return response(200, {"registration": restore_location_prefixes(item)})
+    return response(200, {"registration": item})
 
 
 def handle_admin_update(event):
@@ -401,7 +400,7 @@ def handle_admin_update(event):
             return response(404, {"message": "Registration not found."})
         return response(500, {"message": "Registration could not be updated."})
 
-    return response(200, {"registration": restore_location_prefixes(item)})
+    return response(200, {"registration": item})
 
 
 def handle_admin_photo(event):

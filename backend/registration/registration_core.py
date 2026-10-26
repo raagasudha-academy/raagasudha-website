@@ -9,10 +9,10 @@ REQUEST_ID_RE = re.compile(r"^[A-Za-z0-9._:-]{8,128}$")
 PERSON_ID_RE = re.compile(r"^PERSON-[A-Za-z0-9-]{8,96}$")
 
 LOCATION_IDS = {
-    "LOC-NEWCASTLE",
-    "LOC-DURHAM",
-    "LOC-MIDDLESBROUGH",
-    "LOC-ONLINE",
+    "NEWCASTLE",
+    "DURHAM",
+    "MIDDLESBROUGH",
+    "ONLINE",
 }
 COURSE_IDS = {"COURSE-CARNATIC-VOCAL"}
 REGISTRATION_TYPES = {"adult", "children", "adult-and-children"}
@@ -24,20 +24,6 @@ ALLERGENS = {
 REVIEW_STATUSES = {"pending", "under_review", "approved", "discarded"}
 IMPORT_STATUSES = {"not-imported", "importing", "imported", "error"}
 PERSON_ROLES = {"applicant", "guardian", "student"}
-
-
-def strip_location_prefix(location_id):
-    """Store location ids without their LOC- prefix in the database."""
-    if isinstance(location_id, str) and location_id.startswith("LOC-"):
-        return location_id[len("LOC-"):]
-    return location_id
-
-
-def add_location_prefix(location_id):
-    """Restore the LOC- prefix when reading location ids back out of the database."""
-    if isinstance(location_id, str) and location_id and not location_id.startswith("LOC-"):
-        return f"LOC-{location_id}"
-    return location_id
 
 
 def clean_string(value, max_length=500):
@@ -583,13 +569,10 @@ def build_v2_item(cleaned, now=None):
         "primaryContactPersonId": cleaned["primaryContactPersonId"],
         "applicantPersonIds": cleaned["applicantPersonIds"],
         "studentPersonIds": cleaned["studentPersonIds"],
-        "preferredLocationId": strip_location_prefix(cleaned["preferredLocationId"]),
+        "preferredLocationId": cleaned["preferredLocationId"],
         "people": cleaned["people"],
         "relationships": cleaned["relationships"],
-        "students": [
-            {**student, "preferredLocationId": strip_location_prefix(student["preferredLocationId"])}
-            for student in cleaned["students"]
-        ],
+        "students": cleaned["students"],
         "emergencyContact": cleaned["emergencyContact"],
         "privacyAcknowledgement": {
             **cleaned["privacyAcknowledgement"],
@@ -620,25 +603,6 @@ def build_v2_item(cleaned, now=None):
     }
 
 
-def restore_location_prefixes(item):
-    """Return a copy of a stored registration item with LOC- prefixes restored
-    on preferredLocationId fields, for API responses that return the full item."""
-    if not isinstance(item, dict):
-        return item
-    restored = dict(item)
-    if "preferredLocationId" in restored:
-        restored["preferredLocationId"] = add_location_prefix(restored.get("preferredLocationId"))
-    students = restored.get("students")
-    if isinstance(students, list):
-        restored["students"] = [
-            {**student, "preferredLocationId": add_location_prefix(student.get("preferredLocationId"))}
-            if isinstance(student, dict)
-            else student
-            for student in students
-        ]
-    return restored
-
-
 def registration_summary(item):
     schema_version = int(item.get("schemaVersion") or 1)
     if schema_version == 1:
@@ -648,7 +612,7 @@ def registration_summary(item):
             "registrationType": "legacy-single-student",
             "reviewStatus": item.get("reviewStatus") or "legacy",
             "submittedAt": item.get("submittedAt"),
-            "preferredLocationId": add_location_prefix(item.get("preferredLocationId")),
+            "preferredLocationId": item.get("preferredLocationId"),
             "primaryName": (item.get("parentGuardian") or {}).get("name") or (item.get("student") or {}).get("name"),
             "studentNames": [(item.get("student") or {}).get("name")],
             "studentCount": 1,
@@ -662,7 +626,7 @@ def registration_summary(item):
         "registrationType": item.get("registrationType"),
         "reviewStatus": item.get("reviewStatus") or (item.get("review") or {}).get("status") or "pending",
         "submittedAt": item.get("submittedAt"),
-        "preferredLocationId": add_location_prefix(item.get("preferredLocationId")),
+        "preferredLocationId": item.get("preferredLocationId"),
         "primaryName": (people.get(item.get("primaryContactPersonId")) or {}).get("fullName"),
         "studentNames": [
             (people.get(person_id) or {}).get("fullName")

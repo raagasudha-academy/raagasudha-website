@@ -8,17 +8,17 @@ import newcastleImage from '../assets/locations/newcastle.webp'
 import onlineClassImage from '../assets/classes/online-classes.webp'
 
 const locationPresentation = {
-    'LOC-NEWCASTLE': {
+    'NEWCASTLE': {
         image: newcastleImage,
         fadeMid: 'rgba(255,247,240,0.55)',
         fadeEnd: 'rgba(255,247,240,0.96)',
     },
-    'LOC-DURHAM': {
+    'DURHAM': {
         image: durhamImage,
         fadeMid: 'rgba(228,243,238,0.55)',
         fadeEnd: 'rgba(228,243,238,0.96)',
     },
-    'LOC-MIDDLESBROUGH': {
+    'MIDDLESBROUGH': {
         image: middlesbroughImage,
         fadeMid: 'rgba(255,247,240,0.55)',
         fadeEnd: 'rgba(255,247,240,0.96)',
