@@ -64,7 +64,8 @@ See `backend/registration/REGISTRATION_V2_CONTRACT.md` for the import contract.
 The frontend continues using the existing variable:
 
 ```text
-VITE_REGISTRATION_API_URL=https://tc22v9iexa.execute-api.us-east-1.amazonaws.com/registration
+Local development: VITE_REGISTRATION_API_URL=https://ruaignd57e.execute-api.us-east-1.amazonaws.com/registration
+Production:        VITE_REGISTRATION_API_URL=https://yaug86x7o0.execute-api.us-east-1.amazonaws.com/registration
 ```
 
 No AWS credentials, Sadhana IDs or permanent student identifiers are generated or stored in the browser.
