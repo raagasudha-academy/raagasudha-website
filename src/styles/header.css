@@ -233,6 +233,27 @@
   color: white;
 }
 
+.nav .nav-student-login {
+  padding: 10px 16px;
+
+  border: 1px solid var(--blue);
+  border-radius: 999px;
+
+  color: var(--blue-dark);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav .nav-student-login:hover {
+  background: var(--blue-soft);
+  color: var(--blue-dark);
+}
+
+.nav > a.nav-student-login::after {
+  display: none;
+}
+
 /* =========================================================
    HAMBURGER
    ========================================================= */
@@ -406,6 +427,18 @@
   .nav-dropdown:hover .nav-dropdown-menu,
   .nav-dropdown:focus-within .nav-dropdown-menu {
     transform: none;
+  }
+
+  .nav .nav-student-login {
+    align-self: stretch;
+    margin: 0;
+    padding: 13px 4px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--blue);
+    font-size: 15px;
+    font-weight: 700;
   }
 
   .nav .nav-contact {

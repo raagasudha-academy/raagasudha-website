@@ -615,7 +615,7 @@ function Registration() {
     if (targetStep === 3) {
       return keys.filter((key) =>
         key.startsWith('emergencyContact.') ||
-        ['privacyAccepted', 'mediaConsent', 'informationAccurate', 'signedBy'].includes(key)
+        ['privacyAccepted', 'contactMethods', 'mediaConsent', 'informationAccurate', 'signedBy'].includes(key)
       )
     }
     return keys
@@ -993,10 +993,32 @@ function Registration() {
                       <a href={`${import.meta.env.BASE_URL}governance/DataProtection.pdf`} target="_blank" rel="noreferrer">
                         Data Protection Policy
                       </a>{' '}
-                      and understand how registration information will be used. *
+                      and agree that Raaga Sudha may hold and process the personal information in this application to review registration and arrange learning. *
                     </span>
                   </label>
                   <ErrorText error={fieldErrors.privacyAccepted} />
+
+                  <fieldset className="registration-question registration-media-consent">
+                    <legend>How may Raaga Sudha contact you? Select at least one. *</legend>
+                    <p>We contact families about registration and learning by phone (calls, text messages, including WhatsApp) and email.</p>
+                    <div className="registration-choice-row">
+                      <label>
+                        <input type="checkbox" checked={form.contactMethods.phone} onChange={(event) => {
+                          setForm((current) => ({ ...current, contactMethods: { ...current.contactMethods, phone: event.target.checked } }))
+                          clearError('contactMethods')
+                        }} />
+                        <span>Phone, text and WhatsApp</span>
+                      </label>
+                      <label>
+                        <input type="checkbox" checked={form.contactMethods.email} onChange={(event) => {
+                          setForm((current) => ({ ...current, contactMethods: { ...current.contactMethods, email: event.target.checked } }))
+                          clearError('contactMethods')
+                        }} />
+                        <span>Email</span>
+                      </label>
+                    </div>
+                    <ErrorText error={fieldErrors.contactMethods} />
+                  </fieldset>
 
                   <fieldset className="registration-question registration-media-consent">
                     <legend>Photography / media consent *</legend>
@@ -1069,6 +1091,7 @@ function Registration() {
                 <div className="registration-review-heading"><h3>Consent & submission</h3><button type="button" onClick={() => setStep(3)}>Edit</button></div>
                 <dl>
                   <div><dt>Privacy notice</dt><dd>{form.privacyAccepted ? 'Acknowledged' : 'Not acknowledged'}</dd></div>
+                  <div><dt>Contact methods</dt><dd>{[form.contactMethods.phone && 'Phone, text and WhatsApp', form.contactMethods.email && 'Email'].filter(Boolean).join(', ')}</dd></div>
                   <div><dt>Media consent</dt><dd>{form.mediaConsent === 'granted' ? 'Granted' : 'Declined'}</dd></div>
                   <div><dt>Emergency contact</dt><dd>{form.emergencyContact.name} · {form.emergencyContact.phone}</dd></div>
                 </dl>

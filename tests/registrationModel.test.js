@@ -17,6 +17,7 @@ function validPrimary(form) {
   form.primary.preferredLocationId = 'NEWCASTLE'
   form.emergencyContact = { name: 'Emergency Person', phone: '+447700900999' }
   form.privacyAccepted = true
+  form.contactMethods.phone = true
   form.mediaConsent = 'declined'
   form.informationAccurate = true
   form.signedBy = 'Primary Adult'

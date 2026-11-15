@@ -112,6 +112,7 @@ def base_submission(registration_type="children"):
         "students": students,
         "emergencyContact": {"name": "Emergency Person", "phone": "+447700900999"},
         "privacyAcknowledgement": {"accepted": True, "noticeVersion": "2026-10-25"},
+        "contactMethods": {"phone": True, "email": False},
         "mediaConsent": {"granted": False, "version": "2026-10-25"},
         "registrationNotes": "",
         "declaration": {

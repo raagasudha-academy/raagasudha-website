@@ -111,6 +111,7 @@ export function initialRegistrationForm() {
       phone: '',
     },
     privacyAccepted: false,
+    contactMethods: { phone: false, email: false },
     mediaConsent: '',
     registrationNotes: '',
     informationAccurate: false,
@@ -335,6 +336,9 @@ export function validateRegistration(form) {
     errors['emergencyContact.phone'] = PHONE_ERROR
   }
   if (!form.privacyAccepted) errors.privacyAccepted = 'Please acknowledge the privacy notice.'
+  if (!form.contactMethods?.phone && !form.contactMethods?.email) {
+    errors.contactMethods = 'Select at least one way we may contact you.'
+  }
   if (!['granted', 'declined'].includes(form.mediaConsent)) {
     errors.mediaConsent = 'Please record your photography/media consent choice.'
   }
@@ -517,6 +521,10 @@ export function buildRegistrationPayload({ form, requestId, uploadedPhotos = {} 
     privacyAcknowledgement: {
       accepted: Boolean(form.privacyAccepted),
       noticeVersion: '2026-10-25',
+    },
+    contactMethods: {
+      phone: Boolean(form.contactMethods?.phone),
+      email: Boolean(form.contactMethods?.email),
     },
     mediaConsent: {
       granted: form.mediaConsent === 'granted',

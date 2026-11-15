@@ -8,7 +8,7 @@ The existing `/registration` entry point is retained, but the form becomes a uni
 - a parent/legal guardian registering one or more children;
 - an adult registering themselves and one or more children together.
 
-The current DynamoDB table `raagasudha-student-registrations` remains in place. Existing `schemaVersion: 1` items are not rewritten. New submissions are stored as `schemaVersion: 2`.
+The intake uses separate DynamoDB tables: `dev-raagasudha-student-registrations` for development/test and `prod-raagasudha-student-registrations` for production. Existing legacy records are copied to the production table without rewriting their schema; new submissions continue to use `schemaVersion: 2`.
 
 ## Safe local application
 
@@ -26,7 +26,7 @@ Do not deploy the backend until the v2 form and migration audit have been review
 
 ```bash
 cd backend/registration
-python3 migration_audit.py --table raagasudha-student-registrations --region us-east-1
+python3 migration_audit.py --table prod-raagasudha-student-registrations --region us-east-1
 ```
 
 This performs no writes.
@@ -37,7 +37,7 @@ The existing deployment script has been extended non-destructively. It reuses th
 
 ```bash
 cd backend/registration
-AWS_REGION=us-east-1 ./deploy.sh
+REGISTRATION_STAGE=prod AWS_REGION=us-east-1 ./deploy.sh
 ```
 
 Public routes:

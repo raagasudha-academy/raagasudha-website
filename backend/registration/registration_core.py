@@ -510,6 +510,12 @@ def validate_v2(payload):
     if not privacy_version:
         errors["privacyAccepted"] = "Privacy notice version is required."
 
+    contact_raw = payload.get("contactMethods") if isinstance(payload.get("contactMethods"), dict) else {}
+    contact_phone = contact_raw.get("phone")
+    contact_email = contact_raw.get("email")
+    if not isinstance(contact_phone, bool) or not isinstance(contact_email, bool) or not (contact_phone or contact_email):
+        errors["contactMethods"] = "Select at least one approved contact method."
+
     media_raw = payload.get("mediaConsent") if isinstance(payload.get("mediaConsent"), dict) else {}
     if media_raw.get("granted") not in (True, False):
         errors["mediaConsent"] = "Media consent choice is required."
@@ -541,6 +547,7 @@ def validate_v2(payload):
         "students": students,
         "emergencyContact": {"name": emergency_name, "phone": emergency_phone},
         "privacyAcknowledgement": {"accepted": privacy_accepted, "noticeVersion": privacy_version},
+        "contactMethods": {"phone": contact_phone is True, "email": contact_email is True},
         "mediaConsent": {"granted": media_granted, "version": media_version},
         "registrationNotes": clean_string(payload.get("registrationNotes"), 2500),
         "declaration": {
@@ -578,6 +585,7 @@ def build_v2_item(cleaned, now=None):
             **cleaned["privacyAcknowledgement"],
             "recordedAt": submitted_at,
         },
+        "contactMethods": cleaned["contactMethods"],
         "mediaConsent": {
             **cleaned["mediaConsent"],
             "recordedAt": submitted_at,

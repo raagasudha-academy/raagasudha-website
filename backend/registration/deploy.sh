@@ -1,20 +1,28 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-TABLE_NAME="${TABLE_NAME:-raagasudha-student-registrations}"
-FUNCTION_NAME="${FUNCTION_NAME:-raagasudha-student-registration}"
-ROLE_NAME="${ROLE_NAME:-raagasudha-student-registration-lambda-role}"
-API_NAME="${API_NAME:-raagasudha-student-registration-api}"
+REGISTRATION_STAGE="${REGISTRATION_STAGE:-prod}"
+case "$REGISTRATION_STAGE" in dev|prod) ;; *) echo "REGISTRATION_STAGE must be dev or prod." >&2; exit 2;; esac
+TABLE_NAME="${TABLE_NAME:-${REGISTRATION_STAGE}-raagasudha-student-registrations}"
+FUNCTION_NAME="${FUNCTION_NAME:-${REGISTRATION_STAGE}-raagasudha-student-registration}"
+ROLE_NAME="${ROLE_NAME:-${REGISTRATION_STAGE}-raagasudha-student-registration-lambda-role}"
+API_NAME="${API_NAME:-${REGISTRATION_STAGE}-raagasudha-student-registration-api}"
 REGION="${AWS_REGION:-${AWS_DEFAULT_REGION:-$(aws configure get region 2>/dev/null || true)}}"
 REGION="${REGION:-eu-west-2}"
 
-ALLOWED_ORIGINS="${ALLOWED_ORIGINS:-http://localhost:5173,http://localhost:5174,http://localhost:4173,https://raagasudha-academy.github.io,https://www.raagasudhamusic.co.uk,https://raagasudhamusic.co.uk}"
+if [[ -z "${ALLOWED_ORIGINS:-}" ]]; then
+  if [[ "$REGISTRATION_STAGE" == prod ]]; then
+    ALLOWED_ORIGINS="https://www.raagasudhamusic.co.uk,https://raagasudhamusic.co.uk"
+  else
+    ALLOWED_ORIGINS="http://localhost:5173,http://localhost:5174,http://localhost:4173,https://raagasudha-academy.github.io"
+  fi
+fi
 
 command -v aws >/dev/null || { echo "ERROR: aws CLI is required."; exit 1; }
 command -v zip >/dev/null || { echo "ERROR: zip is required."; exit 1; }
 
 ACCOUNT_ID="$(aws sts get-caller-identity --query Account --output text --region "$REGION")"
-PHOTO_BUCKET="${PHOTO_BUCKET:-raagasudha-registration-photos-${ACCOUNT_ID}-${REGION}}"
+PHOTO_BUCKET="${PHOTO_BUCKET:-${REGISTRATION_STAGE}-raagasudha-registration-photos-${ACCOUNT_ID}-${REGION}}"
 TABLE_ARN="arn:aws:dynamodb:${REGION}:${ACCOUNT_ID}:table/${TABLE_NAME}"
 PHOTO_BUCKET_ARN="arn:aws:s3:::${PHOTO_BUCKET}"
 ROLE_ARN="arn:aws:iam::${ACCOUNT_ID}:role/${ROLE_NAME}"
@@ -26,6 +34,7 @@ trap 'rm -rf "$TMP_DIR"' EXIT
 echo "Region: $REGION"
 echo "Account: $ACCOUNT_ID"
 echo "Registration table: $TABLE_NAME"
+echo "Registration stage: $REGISTRATION_STAGE"
 echo "Private photo bucket: $PHOTO_BUCKET"
 echo
 

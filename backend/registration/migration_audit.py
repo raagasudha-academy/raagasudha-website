@@ -19,7 +19,7 @@ except ModuleNotFoundError:
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--table", default="raagasudha-student-registrations")
+    parser.add_argument("--table", default="prod-raagasudha-student-registrations")
     parser.add_argument("--region", default=None)
     args = parser.parse_args()
 

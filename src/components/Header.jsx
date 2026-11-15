@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 
+const studentLoginUrl = 'https://sadhana.raagasudhamusic.co.uk'
+
 const links = [
     ['/', 'Home'],
     ['/classes', 'Classes'],
@@ -95,6 +97,13 @@ function Header() {
                             </NavLink>
                         </div>
                     </div>
+
+                    <a
+                        className="nav-student-login"
+                        href={studentLoginUrl}
+                    >
+                        Student Login
+                    </a>
 
                     <NavLink
                         className="nav-contact"

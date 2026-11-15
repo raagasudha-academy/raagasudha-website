@@ -14,7 +14,8 @@ Sadhana integration:
 
 ## Existing resources retained
 
-- DynamoDB table: `raagasudha-student-registrations`
+- Production DynamoDB table: `prod-raagasudha-student-registrations`
+- Development/test DynamoDB table: `dev-raagasudha-student-registrations`
 - Partition key: `registrationId` (String)
 - Lambda: `raagasudha-student-registration`
 - HTTP API: `raagasudha-student-registration-api`
@@ -58,7 +59,7 @@ Before deploying v2, inspect the existing table without changing it:
 
 ```bash
 cd backend/registration
-python3 migration_audit.py --table raagasudha-student-registrations --region us-east-1
+python3 migration_audit.py --table prod-raagasudha-student-registrations --region us-east-1
 ```
 
 The script reports schema-version counts only. No backfill is required for v2 because the Lambda continues to read/accept v1 records without rewriting them.

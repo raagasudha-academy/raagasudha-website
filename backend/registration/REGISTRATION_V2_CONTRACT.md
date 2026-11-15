@@ -4,7 +4,7 @@
 
 The public Raaga Sudha website is an **intake source only**. A submitted application does not create a permanent Sadhana family, student number, roll number, Cognito account, portal permission, or active class enrolment.
 
-The existing DynamoDB table `raagasudha-student-registrations` remains the source of intake records. Legacy `schemaVersion: 1` records remain unchanged and readable. New unified submissions use `schemaVersion: 2`.
+Stage-specific DynamoDB tables are the source of intake records: `dev-raagasudha-student-registrations` for development and `prod-raagasudha-student-registrations` for production. Legacy `schemaVersion: 1` records remain unchanged and readable. New unified submissions use `schemaVersion: 2`.
 
 ## Stable external keys
 
@@ -25,7 +25,7 @@ A v2 DynamoDB item contains:
 - family links: `relationships[]`, always initially `verificationStatus: unverified`;
 - student intake: `students[]`, keyed by each student's `personId`;
 - per-student contact inheritance sources, class preferences, food allergy record, optional health/support notes and optional private photograph reference;
-- submission-level emergency contact, privacy acknowledgement, media consent and declaration.
+- submission-level emergency contact, privacy acknowledgement, selected phone/email contact methods, media consent and declaration.
 
 Inherited guardian contact details are **not copied** into a child's own email/phone/address fields. `students[].contactPreferences` records the source and guardian reference.
 
