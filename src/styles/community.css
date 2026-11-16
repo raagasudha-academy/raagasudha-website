@@ -408,6 +408,11 @@
   object-fit: cover;
 }
 
+.community-moment-wide img {
+  object-position: center 62%;
+  transform: scale(1.08);
+}
+
 @media (max-width: 760px) {
   .community-moments {
     padding-top: 68px;
@@ -435,5 +440,10 @@
     grid-column: auto;
     aspect-ratio: 4 / 3;
     border-radius: 20px;
+  }
+
+  .community-moment-wide img {
+    object-position: center 58%;
+    transform: none;
   }
 }
