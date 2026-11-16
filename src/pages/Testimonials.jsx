@@ -27,11 +27,20 @@ function Testimonials() {
           <article className="testimonials-sample-card testimonials-sample-card-parent">
             <p className="testimonial-sample-label">Parent voice</p>
             <blockquote>
-              Seeing my twin girls grow in confidence through music has been
-              a joy. I’m grateful to Raaga Sudha for creating a warm, encouraging
-              space for them to learn and share their talents.
+              Seeing my twin girls grow in confidence through music has been a joy. I’m grateful to Raagasudha for creating a warm, encouraging space where they can learn, share their talents, and deepen their connection to our rich traditions and cultural heritage.
             </blockquote>
             <p className="testimonials-sample-byline">Mohana Kamanooru <span>Middlesbrough</span></p>
+          </article>
+          <article className="testimonials-sample-card testimonials-sample-card-community">
+            <p className="testimonial-sample-label">Parent voice</p>
+            <blockquote>
+              Singing and chanting with my children through Raaga Sudha has
+              become a treasured part of our family life. We love learning
+              devotional songs together, and it fills me with joy to see them
+              connect with music and our culture. Thank you to the Raaga Sudha
+              team for keeping our traditions alive for the next generation.
+            </blockquote>
+            <p className="testimonials-sample-byline">Swathi Vangala <span>Middlesbrough</span></p>
           </article>
         </div>
       </section>
