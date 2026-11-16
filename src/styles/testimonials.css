@@ -202,9 +202,9 @@
 .testimonials-sample-card blockquote {
   margin: 0 0 24px;
   color: var(--blue-dark);
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 23px;
-  line-height: 1.35;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
 }
 
 .testimonials-sample-byline {
