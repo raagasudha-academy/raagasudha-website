@@ -11,6 +11,7 @@ import Events from './pages/Events'
 import Community from './pages/Community'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
+import Testimonials from './pages/Testimonials'
 import Directors from './pages/Directors'
 import Governance from './pages/Governance'
 import Registration from './pages/Registration'
@@ -59,6 +60,10 @@ const pageMeta = {
   '/contact': {
     title: 'Contact | Raaga Sudha Music Academy',
     description: 'Contact Raaga Sudha Music Academy about classes, registration, events and community activities.',
+  },
+  '/testimonials': {
+    title: 'Testimonials | Raaga Sudha Music Academy',
+    description: 'Stories and reflections from the Raaga Sudha Music Academy community.',
   },
 }
 
@@ -111,6 +116,7 @@ function App() {
               <Route path="/community" element={<Community />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/testimonials" element={<Testimonials />} />
               <Route path="/registration" element={<Registration />} />
             </Routes>
           </main>

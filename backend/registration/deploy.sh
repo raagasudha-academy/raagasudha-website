@@ -14,7 +14,7 @@ if [[ -z "${ALLOWED_ORIGINS:-}" ]]; then
   if [[ "$REGISTRATION_STAGE" == prod ]]; then
     ALLOWED_ORIGINS="https://www.raagasudhamusic.co.uk,https://raagasudhamusic.co.uk"
   else
-    ALLOWED_ORIGINS="http://localhost:5173,http://localhost:5174,http://localhost:4173,https://raagasudha-academy.github.io"
+    ALLOWED_ORIGINS="http://localhost:5173,http://localhost:5174,http://localhost:5175,http://localhost:4173,https://raagasudha-academy.github.io"
   fi
 fi
 

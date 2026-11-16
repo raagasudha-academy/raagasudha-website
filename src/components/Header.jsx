@@ -8,8 +8,9 @@ const links = [
     ['/classes', 'Classes'],
     ['/events', 'Events'],
     ['/community', 'Community'],
+    ['/testimonials', 'Testimonials'],
     ['/gallery', 'Gallery'],
-    ['/registration', 'Register'],
+    ['/contact', 'Contact'],
 ]
 
 function Header() {
@@ -107,9 +108,9 @@ function Header() {
 
                     <NavLink
                         className="nav-contact"
-                        to="/contact"
+                        to="/registration"
                     >
-                        Contact
+                        Register
                     </NavLink>
                 </nav>
 
