@@ -1,8 +1,8 @@
 import Button from '../components/Button'
-import communityPhoto from '../assets/home/autism-music.webp'
-import audiencePhoto from '../assets/community/community-audience-stage.webp'
-import applausePhoto from '../assets/community/community-applause.webp'
-import finalePhoto from '../assets/community/community-finale.webp'
+import communityPhoto from '../assets/community/community-photo-4.webp'
+import audiencePhoto from '../assets/community/community-photo-2.webp'
+import applausePhoto from '../assets/community/community-photo-1.webp'
+import finalePhoto from '../assets/community/community-photo-3.webp'
 
 function Community() {
     return (
@@ -61,7 +61,7 @@ function Community() {
                     <div className="community-feature-photo">
                         <img
                             src={communityPhoto}
-                            alt="Raaga Sudha community music performance with Autism Able participants"
+                            alt="Raaga Sudha students and musicians performing together beneath a projected backdrop"
                             loading="lazy"
                         />
                     </div>
@@ -103,7 +103,7 @@ function Community() {
                     <figure className="community-moment community-moment-wide">
                         <img
                             src={finalePhoto}
-                            alt="Raaga Sudha performers, teachers and families together after a performance"
+                            alt="Raaga Sudha singers seated together during a stage performance"
                             loading="lazy"
                         />
                     </figure>
@@ -111,7 +111,7 @@ function Community() {
                     <figure className="community-moment">
                         <img
                             src={audiencePhoto}
-                            alt="Raaga Sudha audience applauding performers on stage"
+                            alt="Raaga Sudha students and teachers gathered on stage in colorful traditional clothing"
                             loading="lazy"
                         />
                     </figure>
@@ -119,7 +119,7 @@ function Community() {
                     <figure className="community-moment">
                         <img
                             src={applausePhoto}
-                            alt="Audience members standing and applauding at a Raaga Sudha performance"
+                            alt="Raaga Sudha students performing together in white traditional clothing"
                             loading="lazy"
                         />
                     </figure>
