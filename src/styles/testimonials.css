@@ -163,6 +163,8 @@
 
 .testimonials-sample-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   min-height: 290px;
   padding: 28px;
@@ -210,7 +212,7 @@
 .testimonials-sample-byline {
   display: grid;
   gap: 4px;
-  margin: 0;
+  margin: auto 0 0;
   color: var(--blue-dark);
   font-size: 13px;
   font-weight: 700;
