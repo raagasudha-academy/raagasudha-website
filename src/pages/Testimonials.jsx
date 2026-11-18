@@ -18,29 +18,45 @@ function Testimonials() {
         <div className="testimonials-hero-mark" aria-hidden="true">♪</div>
       </section>
 
-      <section className="testimonials-more-samples section" aria-label="More sample testimonials">
+      <section className="testimonials-more-samples section" aria-label="Testimonials">
         <div className="testimonials-more-heading">
-          <p className="eyebrow">Peoples voices</p>
-          <h2>Music is personal.So is every story.</h2>
+          <p className="eyebrow">People’s voices</p>
+          <h2>Music is personal. So is every story.</h2>
         </div>
         <div className="testimonials-sample-grid">
           <article className="testimonials-sample-card testimonials-sample-card-parent">
             <p className="testimonial-sample-label">Parent voice</p>
             <blockquote>
-              Seeing my twin girls grow in confidence through music has been a joy. I’m grateful to Raagasudha for creating a warm, encouraging space where they can learn, share their talents, and deepen their connection to our rich traditions and cultural heritage.
+              Watching my twin girls grow in confidence through music has been
+              such a joy. Raaga Sudha gives them a warm, encouraging place to
+              learn and share their talents. I’m grateful for the teachers’ care
+              and for helping them connect with our traditions.
             </blockquote>
-            <p className="testimonials-sample-byline">Mohana Kamanooru <span>Middlesbrough</span></p>
+            <p className="testimonials-sample-byline">Mohana Kamanooru <span>Middlesbrough · 2026</span></p>
           </article>
           <article className="testimonials-sample-card testimonials-sample-card-community">
             <p className="testimonial-sample-label">Parent voice</p>
             <blockquote>
-              Singing and chanting with my children through Raaga Sudha has
-              become a treasured part of our family life. We love learning
-              devotional songs together, and it fills me with joy to see them
-              connect with music and our culture. Thank you to the Raaga Sudha
-              team for keeping our traditions alive for the next generation.
+              Singing and chanting with my kids through Raagasudha is a
+              beautiful part of our everyday life. We love enjoying soulful
+              melodies and learning devotional songs together. It’s a joy to
+              see them embrace music and our culture. Thank you for bringing
+              families closer and keeping our traditions alive.
             </blockquote>
-            <p className="testimonials-sample-byline">Swathi Vangala <span>Middlesbrough</span></p>
+            <p className="testimonials-sample-byline">Swathi Vangala <span>Middlesbrough · 2026</span></p>
+          </article>
+          <article className="testimonials-sample-card testimonials-sample-card-learner">
+            <p className="testimonial-sample-label">Student voice</p>
+            <blockquote>
+              I’ve been learning classical music with Praveena Srikanthan for
+              the past four years, and it’s been a joyful journey. Her patience,
+              love and knowledge make learning special. The Annual Music Shows
+              have helped me overcome stage nerves, and performing has built my
+              confidence and given me lasting
+              memories. I’m grateful to Praveena and Raagasudha for keeping our
+              tradition alive in such an encouraging space.
+            </blockquote>
+            <p className="testimonials-sample-byline">Sreelekha Reddy <span>Sunderland · 2026</span></p>
           </article>
         </div>
       </section>
