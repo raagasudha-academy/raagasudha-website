@@ -48,7 +48,7 @@ function Testimonials() {
           <article className="testimonials-sample-card testimonials-sample-card-learner">
             <p className="testimonial-sample-label">Student voice</p>
             <blockquote>
-              I’ve been learning classical music with Praveena Srikanthan for
+              I’ve been learning classical music with Praveena Srikailash for
               the past four years, and it’s been a joyful journey. Her patience,
               love and knowledge make learning special. The Annual Music Shows
               have helped me overcome stage nerves, and performing has built my
