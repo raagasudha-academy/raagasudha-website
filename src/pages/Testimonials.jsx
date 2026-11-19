@@ -58,6 +58,19 @@ function Testimonials() {
             </blockquote>
             <p className="testimonials-sample-byline">Sreelekha Reddy <span>Sunderland · 2026</span></p>
           </article>
+          <article className="testimonials-sample-card testimonials-sample-card-community">
+            <p className="testimonial-sample-label">Parent voice</p>
+            <blockquote>
+              Joining Raaga Sudha with my daughters to learn devotional songs
+              has given us so much more. The annual performances have built our
+              confidence in singing and acting on stage. Praveena’s passion,
+              patient guidance with Carnatic pronunciation, and engaging
+              activities and stories make every class special. We love learning,
+              making friends and performing together, and look forward to each
+              session.
+            </blockquote>
+            <p className="testimonials-sample-byline">Sreelekha Koganti <span>Durham · 2026</span></p>
+          </article>
         </div>
       </section>
 
